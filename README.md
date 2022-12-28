@@ -1,21 +1,23 @@
-# Gomoku
+# renju-player
+
 A gomoku program. Following picture shows the board of gomoku
 
 In this game, there are two players. Each have its own stone color, black and white.
 
 Starting with black player, the players alternate their turns by putting stones.
 
-If any player puts five stones of same color in a row, one can win. The direction of the row can be vertical, horizontal, or diagonal.  
+If any player puts five stones of same color in a row, one can win. The direction of the row can be vertical, horizontal, or diagonal.
 
 <center>
 
-![](img_readme/board.png)
+![](img_readme/board_example.png)
 
 Image of the program
 
 </center>
 
 # Rule (renju)
+
 This program follows the renju rule.
 
 Because of the advantage to the black player, some rules are added for equity.
@@ -27,8 +29,8 @@ Because of the advantage to the black player, some rules are added for equity.
 
 If black violates rule 1,2,3, then black lose. If white follows rule 4, then white wins.
 
-
 # Forbidden place
+
 This program shows the forbidden place of the black stone described at the rule.
 
 If the place is forbidden, the board shows red point.
@@ -50,6 +52,7 @@ double 4
 </center>
 
 # Requirements
+
 ```
-pyqt >= 5.9.2
+pyqt == 5.9.2
 ```

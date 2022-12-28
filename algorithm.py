@@ -12,7 +12,7 @@ class Renju:
         self.message = ""
         self.forbidden_list = []
 
-        self.direc = [[1,0], [0,1], [1,1], [1,-1]]
+        self.direc = [[1, 0], [0, 1], [1, 1], [1, -1]]
         self.stones = [[self.blank for i in range(15)] for j in range(15)]
 
     # If place is out of bounds, returns edge. Else returns the color of that place
@@ -114,7 +114,7 @@ class Renju:
                     else:
                         lengths.append(3)
 
-            if row_blank_cnt == 4 and row_cnt != 1:
+            if row_blank_cnt == 4:
                 if 4 in lengths:
                     return True
                 else:
@@ -141,7 +141,7 @@ class Renju:
         self.stones[x][y] = color
         for di in self.direc:
             row_cnt = 1
-            cur_place = list_add([x,y], di)
+            cur_place = list_add([x, y], di)
 
             prev_color = color
             cur_color = self.get_stone_color(cur_place)
@@ -153,7 +153,7 @@ class Renju:
                 prev_color = cur_color
                 cur_color = self.get_stone_color(cur_place)
 
-            cur_place = list_sub([x,y], di)
+            cur_place = list_sub([x, y], di)
 
             prev_color = color
             cur_color = self.get_stone_color(cur_place)
@@ -174,7 +174,7 @@ class Renju:
                     self.message = "Black Win! 5 in a row!"
 
     def check_forbidden(self, x, y):
-        if [x,y] in self.forbidden_list:
+        if [x, y] in self.forbidden_list:
             self.is_end = True
             self.message = "White Win! Black took a forbidden place!"
 

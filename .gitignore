@@ -1,2 +1,3 @@
 /.idea/
-git format.txt
+/__pycache__/
+todo.txt
